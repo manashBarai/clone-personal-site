@@ -91,8 +91,8 @@ export default function page() {
           <button className="border-zinc-600  rounded-lg  bg-zinc-700 text-slate-50 px-5 py-2">
             About
           </button>
-          <button className="border-zinc-600 rounded-lg  border bg-transparent text-slate-50 px-5 py-2">
-            Email
+          <button className="border-zinc-600 rounded-lg  border bg-transparent text-slate-50 px-5 py-2 flex gap-2 item-center">
+            <Image src="/images/logo/copy.png" width={17} height={17} alt="copy" /> Email
           </button>
         </div>
       </section>
@@ -208,7 +208,7 @@ export default function page() {
       <div className="feedcard bg-zinc-900 border-zinc-700 border rounded-lg p-6 flex-1 flex flex-col gap-7">
           <div className="rounded-full bg-zinc-800 p-2 border border-zinc-600 w-9 h-9 ">
 
-            <Image src="/images/logo create (2)/Collage.png" alt="" quality={100} width={24} height={24}  />
+            <Image src="/images/logo/Collage.png" alt="" quality={100} width={24} height={24}  />
 
           </div>
 
@@ -230,7 +230,7 @@ export default function page() {
         <div className="feedcard bg-zinc-900 border-zinc-700 border rounded-lg p-6 flex-1 flex flex-col gap-7">
           <div className="rounded-full bg-zinc-800 p-2 border border-zinc-600 w-9 h-9 ">
 
-            <Image src="/images/logo create (2)/Collage.png" alt="" quality={100} width={24} height={24}  />
+            <Image src="/images/logo/Collage.png" alt="" quality={100} width={24} height={24}  />
 
           </div>
 

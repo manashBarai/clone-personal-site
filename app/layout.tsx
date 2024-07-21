@@ -19,7 +19,7 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const [menuWidth, setMenuWidth] = useState<boolean>(false);
+  const [menuWidth, setMenuWidth] = useState<boolean>(true);
 
   const widthsubstract = (v: boolean) => {
     setMenuWidth(v);

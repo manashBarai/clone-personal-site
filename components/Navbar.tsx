@@ -15,54 +15,59 @@ interface NavbarProps {
 }
 
 export default function Navbar({ widthsubstract }: NavbarProps) {
-  const [menuWidth, setMenuWidth] = useState<boolean>(false);
+  const [menuWidth, setMenuWidth] = useState<boolean>(true);
   const [menuName, setMenuName] = useState<string>("Explore");
   const [menuId, setMenuId] = useState<string>("Explore");
   const [hoverId, setHoverId] = useState<string | null>(null);
 
   const firstMenu: IFirstMenu[] = [
     {
-      imageIcon: "/images/logo create (2)/Explore.png",
+      imageIcon: "/images/logo/Explore.png",
       imageIcon2: "/images/greyVersion/Explore.png",
       nameOfItem: "Explore",
       id: "1",
     },
     {
-      imageIcon: "/images/logo create (2)/boutique.png",
+      imageIcon: "/images/logo/boutique.png",
       imageIcon2: "/images/greyVersion/boutique.png",
       nameOfItem: "Boutique",
       id: "2",
     },
     {
-      imageIcon: "/images/logo create (2)/Pen.png",
+      imageIcon: "/images/logo/Pen.png",
       imageIcon2: "/images/greyVersion/Pen.png",
       nameOfItem: "Projects",
       id: "3",
     },
     {
-      imageIcon: "/images/logo create (2)/Group 2.png",
+      imageIcon: "/images/logo/Group 2.png",
       imageIcon2: "/images/greyVersion/Group 6.png",
       nameOfItem: "Services",
       id: "4",
     },
-    // { imageIcon: "/images/logo create (2)/Group 2.png",imageIcon2:"/images/#848484/Explore.png", nameOfItem: "About", id: "4" },
+    {
+      imageIcon: "/images/logo/head.png",
+      imageIcon2: "/images/greyVersion/head.png",
+      nameOfItem: "About",
+      id: "5",
+    },
   ];
 
   const resources: IFirstMenu[] = [
     {
-      imageIcon: "/images/logo create (2)/Collage.png",
+      imageIcon: "/images/logo/Collage.png",
       imageIcon2: "/images/greyVersion/Collage.png",
       nameOfItem: "Feed",
       id: "6",
     },
     {
-      imageIcon: "/images/logo create (2)/boutique.png",
-      imageIcon2: "/images/greyVersion/boutique.png",
+      imageIcon: "/images/logo/Mailbox.png",
+      imageIcon2: "/images/greyVersion/Mailbox.png",
       nameOfItem: "Thoughts",
       id: "7",
     },
     {
-      imageIcon: "/images/logo create (2)/Pen.png",
+      imageIcon: "/images/logo/Pen.png",
       imageIcon2: "/images/greyVersion/Pen.png",
       nameOfItem: "Stack",
       id: "8",
@@ -132,7 +137,7 @@ export default function Navbar({ widthsubstract }: NavbarProps) {
               {menuWidth && (
                 <div className="profileName">
                   <p className="font-bold m-0 p-0">Lorem EPsum</p>
-                  <p className="text-zinc-700 m-0 p-0 font-bold">
+                  <p className="text-zinc-700 m-0 p-0 font-semibold">
                     Product Designer
                   </p>
                 </div>
@@ -141,7 +146,7 @@ export default function Navbar({ widthsubstract }: NavbarProps) {
             {firstMenu.map((menuItem: IFirstMenu) => (
               <li
                 key={menuItem.id}
-                className={`flex justify-center relative  ${
+                className={`flex justify-center relative  text-[14px] ${
                   menuName === menuItem.nameOfItem
                     ? "border border-zinc-700 rounded bg-zinc-800"
                     : "border-0"
@@ -168,9 +173,9 @@ export default function Navbar({ widthsubstract }: NavbarProps) {
                           : menuItem.imageIcon2
                       }
                       alt="ProfileImage"
-                      width={25}
-                      height={25}
-                      className="rounded-pill w-[20px]"
+                      width={18}
+                      height={17}
+                      className={`rounded-pill `}
                     />
                     {menuWidth ? (
                       <p
@@ -236,7 +241,7 @@ export default function Navbar({ widthsubstract }: NavbarProps) {
             {resources.map((menuItem: IFirstMenu) => (
               <li
                 key={menuItem.id}
-                className={`flex justify-center relative ${
+                className={`flex justify-center relative  ${
                   menuName === menuItem.nameOfItem
                     ? "border border-zinc-500 rounded bg-zinc-800"
                     : "border-0"
@@ -269,7 +274,7 @@ export default function Navbar({ widthsubstract }: NavbarProps) {
                     />
                     {menuWidth ? (
                       <p
-                        className={`m-0 p-0  ${
+                        className={`m-0 p-0  text-[14px] ${
                           menuId === menuItem.id ||
                           menuName === menuItem.nameOfItem
                             ? "text-white"
@@ -318,8 +323,8 @@ export default function Navbar({ widthsubstract }: NavbarProps) {
                   <Image
                     src={"/images/arrowAndSearchGrey/Search.png"}
                     alt="search"
-                    width={20}
-                    height={20}
+                    width={17}
+                    height={17}
                   />{" "}
                   <span>Search...</span>
                 </div>
